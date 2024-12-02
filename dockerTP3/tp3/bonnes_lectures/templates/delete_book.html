@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supprimer un Livre</title>
+</head>
+<body>
+    <h1>Voulez-vous vraiment supprimer ce livre ?</h1>
+    <p><strong>{{ book.title }}</strong> par {{ book.publisher }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmer la suppression</button>
+    </form>
+    <a href="{% url 'all_books' %}">Annuler</a>
+</body>
+</html>

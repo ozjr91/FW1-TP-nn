@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Début du tp 4
+        </title>
+    </head>
+    <body>
+        <h1>{{ book.title }}</h1>
+        <p><strong>Maison d'édition :</strong> {{ book.publisher }}</p>
+        <p><strong>Année :</strong> {{ book.year }}</p>
+        <p><strong>ISBN :</strong> {{ book.isbn }}</p>
+        <p><strong>Résumé :</strong> {{ book.backCover }}</p>
+        <p><strong>Couverture rigide :</strong> {% if book.cover %}Oui{% else %}Non{% endif %}</p>
+        
+    </body>
+</html>
