@@ -12,10 +12,10 @@
 
         {% block content %}
         <h1 class="mb-4">Liste des livres</h1>
-        <ul class="List-group">
+        <ul class="list-group">
             {% for book in books %}
 
-            <li class="List-group-item">
+            <li class="list-group-item">
                 <strong>{{ book.title }}</strong> par {{ book.publisher }}
                 <br>
                 Année : {{ book.year }}
