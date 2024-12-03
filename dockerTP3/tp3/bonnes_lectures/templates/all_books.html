@@ -1,15 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Liste de livres</title>
+        <title>{% block title %}Bonnes Lectures{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     </head>
     <body>
-        <h1>Liste des livres</h1>
-        <ul>
+
+        {% block content %}
+        <h1 class="mb-4">Liste des livres</h1>
+        <ul class="List-group">
             {% for book in books %}
 
-            <li>
+            <li class="List-group-item">
                 <strong>{{ book.title }}</strong> par {{ book.publisher }}
                 <br>
                 Année : {{ book.year }}
@@ -20,5 +26,6 @@
             </li>
             {% endfor %}
         </ul>
+        {%endblock %}
     </body>
 </html>
